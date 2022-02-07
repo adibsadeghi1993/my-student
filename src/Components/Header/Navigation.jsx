@@ -30,8 +30,9 @@ const Navigation = () => {
           lg:flex lg:flex-row lg:relative lg:top-0 lg:w-fit lg:h-12 lg:items-center lg:shadow-none lg:h-fit `}
         >
           <li
-            className={`navItem mr-4 ml-4 pl-4 mb-2 mt-4
-             hover:bg-blue-400 hover:rounded 
+            className={`navItem 
+            mr-4 ml-4 pl-4 mb-2 mt-4
+            hover:bg-blue-400 hover:rounded 
              lg:ml-0 lg:hover:bg-transparent lg:hover:rounded-none lg:mr-0 lg:pl-0 lg:mb-0 lg:mt-0`}
           >
             <NavLink
@@ -44,7 +45,8 @@ const Navigation = () => {
             </NavLink>
           </li>
           <li
-            className={`navItem mr-4 ml-4 pl-4
+            className={`navItem 
+            mr-4 ml-4 pl-4
             hover:bg-blue-400 hover:rounded 
              lg:ml-0 lg:hover:bg-transparent lg:hover:rounded-none lg:mr-0 lg:pl-0 lg:mb-0 lg:mt-0`}
           >
@@ -85,9 +87,7 @@ export default Navigation;
 
 
 
-
-
-// after:content-none after:block
+// after:content-[''] after:block
 // after:bg-transparent after:transition-all after:duration-500
 // hover:after:w-full  hover:after:bg-red-500"
 
