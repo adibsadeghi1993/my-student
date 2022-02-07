@@ -1,0 +1,12 @@
+@media screen and (max-width: 992px) {
+  .hidden_sidebar {
+    transform: translateX(82%);
+    background-color: blue;
+    transition: all 0.3s ease;
+  }
+
+  .show_sidebar {
+    transform: translateX(+200%);
+    background-color: rgb(255, 0, 0);
+  }
+}

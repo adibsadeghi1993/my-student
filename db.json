@@ -1,0 +1,174 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "img": "http://www.coca.ir/wp-content/uploads/2017/03/men-boys-shoes-photo-gallery-1.jpg",
+      "name": "کفش ادیداس",
+      "category": "ادیداس",
+      "gender": "زنانه",
+      "qty": "2",
+      "price": "3400",
+      "city": [
+        "US"
+      ],
+      "desc": "کفش خوب و قشنگی است"
+    },
+    {
+      "id": 2,
+      "img": "http://www.coca.ir/wp-content/uploads/2017/03/men-boys-shoes-photo-gallery-2.jpg",
+      "name": "کفش نایک",
+      "category": "نایک",
+      "gender": "مردانه",
+      "qty": "3",
+      "price": "5400",
+      "city": [
+        "CA"
+      ],
+      "desc": "کفش خوب و قشنگی است"
+    },
+    {
+      "id": 4,
+      "img": "http://www.coca.ir/wp-content/uploads/2017/03/men-boys-shoes-photo-gallery-3.jpg",
+      "name": "کفش  گوچی",
+      "category": "گوچی",
+      "gender": "مردانه",
+      "qty": "3",
+      "price": "2400",
+      "city": [
+        "AS"
+      ],
+      "desc": "کفش خوب و قشنگی است"
+    },
+    {
+      "id": 5,
+      "img": "http://www.coca.ir/wp-content/uploads/2017/03/men-boys-shoes-photo-gallery-4.jpg",
+      "name": "کفش ریبوک",
+      "category": "ریبوک",
+      "gender": "زنانه",
+      "qty": "0",
+      "price": "1400",
+      "city": [
+        "CA"
+      ],
+      "desc": "کفش خوب و قشنگی است"
+    },
+    {
+      "id": 6,
+      "img": "http://www.coca.ir/wp-content/uploads/2017/03/nike-men-boys-sport-shoes-1-1.jpg",
+      "name": "کفش  اسکیجر",
+      "category": "اسکیجر",
+      "gender": "زنانه",
+      "qty": "0",
+      "price": "5000",
+      "city": [
+        "AS"
+      ],
+      "desc": "کفش خوب و قشنگی است"
+    },
+    {
+      "id": 7,
+      "img": "http://www.coca.ir/wp-content/uploads/2017/03/men-boys-shoes-photo-gallery-5.jpg",
+      "name": "کفش  گوچی",
+      "category": "گوچی",
+      "gender": "زنانه",
+      "qty": "0",
+      "price": "3000",
+      "city": [
+        "CA"
+      ],
+      "desc": "کفش خوب و قشنگی است"
+    },
+    {
+      "id": 8,
+      "img": "http://www.coca.ir/wp-content/uploads/2017/03/men-boys-shoes-photo-gallery-6.jpg",
+      "name": "کفش  ونس ",
+      "category": "ونس",
+      "gender": "زنانه",
+      "qty": "0",
+      "price": "6000",
+      "city": [
+        "US"
+      ],
+      "desc": "کفش خوب و قشنگی است"
+    },
+    {
+      "id": 9,
+      "img": "http://www.coca.ir/wp-content/uploads/2017/03/men-boys-shoes-photo-gallery-7.jpg",
+      "name": "کفش  آسیکس ",
+      "category": "اسیکس",
+      "gender": "زنانه",
+      "qty": "0",
+      "price": "2300",
+      "city": [
+        "US"
+      ],
+      "desc": "کفش خوب و قشنگی است"
+    },
+    {
+      "id": 10,
+      "img": "http://www.coca.ir/wp-content/uploads/2017/03/men-boys-shoes-photo-gallery-8.jpg",
+      "name": " کفش  اسکیجرز مدل افتاب",
+      "category": "اسکیجرز",
+      "gender": "مردانه",
+      "qty": "0",
+      "price": "400",
+      "city": [
+        "CA "
+      ],
+      "desc": "کفش خوب و قشنگی است"
+    },
+    {
+      "id": 11,
+      "img": "http://www.coca.ir/wp-content/uploads/2017/03/nike-men-boys-sport-shoes-2-1.jpg",
+      "name": " کفش  نایک مدل ستاره",
+      "category": "نایک",
+      "gender": "مردانه",
+      "qty": "0",
+      "price": "23400",
+      "city": [
+        "CA "
+      ],
+      "desc": "کفش خوب و قشنگی است"
+    },
+    {
+      "id": 12,
+      "img": "http://www.coca.ir/wp-content/uploads/2017/03/men-boys-shoes-photo-gallery-9.jpg",
+      "name": " کفش  تامی   ",
+      "category": "تامی",
+      "gender": "مردانه",
+      "qty": "0",
+      "price": "9400",
+      "city": [
+        "AS"
+      ],
+      "desc": "کفش خوب و قشنگی است"
+    },
+    {
+      "id": 13,
+      "img": "http://www.coca.ir/wp-content/uploads/2017/03/men-boys-shoes-photo-gallery-10.jpg",
+      "name": " کفش  ادیداس   ",
+      "category": "ایداس",
+      "gender": "مردانه",
+      "qty": "0",
+      "price": "4400",
+      "city": [
+        "CA"
+      ],
+      "desc": "کفش خوب و قشنگی است"
+    }
+  ],
+  "user": [
+    {
+      "id": 4,
+      "username": "raha",
+      "email": "raha@gmail.com",
+      "password": "567"
+    },
+    {
+      "username": "sara",
+      "email": "sami@gmail.com",
+      "password": "789",
+      "id": 5
+    }
+  ]
+}

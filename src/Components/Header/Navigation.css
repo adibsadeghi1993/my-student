@@ -1,0 +1,19 @@
+@media screen and (min-width: 992px) {
+  .navItem:after , .navIcon:after {
+    content: "";
+    display: block;
+    height: 3px;
+    width: 2px;
+    background: transparent;
+    transition: width 0.7s ease, background-color 0.5s ease;
+  }
+
+  .navItem:hover::after {
+    width: 80%;
+    background: #a5b4fc;
+  } 
+  .navIcon:hover::after {
+    width: 100%;
+    background: #a5b4fc;
+  } 
+}
