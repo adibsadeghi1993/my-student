@@ -8,7 +8,7 @@ import { Link } from "react-router-dom";
 import * as api from "../../Services/Services"
 
 
-const Home = ({ users, setUser }) => {
+const Users = ({ users, setUser }) => {
   const removeHandler = async (id) => {
     try {
       await api.deleteUsers(id);
@@ -67,7 +67,7 @@ const Home = ({ users, setUser }) => {
   );
 };
 
-export default Home;
+export default Users;
 
 // axios.get(`http://localhost:4000/user/${id}`)
 // .then(()=>{

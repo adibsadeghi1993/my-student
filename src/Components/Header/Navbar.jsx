@@ -5,7 +5,7 @@ import { FaBars } from "react-icons/fa";
 
 import { NavLink } from "react-router-dom";
 
-import "./Navigation.css";
+import "./Navbar.css";
 
 const Navigation = () => {
   const [open, setOpen] = useState(false);
@@ -17,7 +17,7 @@ const Navigation = () => {
 
   return (
     <header className="">
-      <div className="flex justify-between max-w-7xl items-center  mx-auto py-2 px-6 ">
+      <div className="flex  items-baseline justify-between max-w-7xl items-center  mx-auto py-2 px-6 ">
         <NavLink to="/" className={`navIcon py-1 px-3 text-3xl`}>
           <span className="text-fuchsia-900 font-bold	">S</span>tore
           <span className="text-fuchsia-900 font-bold	">S</span>hoes
@@ -41,7 +41,7 @@ const Navigation = () => {
               style={style}
               onClick={handleClick}
             >
-              Home
+              Product
             </NavLink>
           </li>
           <li
@@ -51,18 +51,18 @@ const Navigation = () => {
              lg:ml-0 lg:hover:bg-transparent lg:hover:rounded-none lg:mr-0 lg:pl-0 lg:mb-0 lg:mt-0`}
           >
             <NavLink
-              to="/products"
+              to="/user"
               className="lg:mr-8 text-lg"
               style={style}
               onClick={handleClick}
             >
-              product
+              User
             </NavLink>
           </li>
         </ul>
 
-        <div onClick={handleClick} className="block text-blue-800 lg:hidden">
-          {open ? <FaTimes /> : <FaBars />}
+        <div onClick={handleClick} className="block text-blue-800 lg:hidden ">
+          {open ? <FaTimes className="text-2xl" /> : <FaBars  className="text-2xl" />}
         </div>
       </div>
     </header>

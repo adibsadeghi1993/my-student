@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
 import CheckBox from "../../Components/CheckBox/CheckBox";
 import Radio from "../../Components/Radio/Radio";
-import Select from "../../Components/Select/Select";
+import Selected from "../../Components/Select/Selected";
+import SelectSize from "../../Components/SelectSize/SelectSize";
 import Sort from "../../Components/Sort/Sort";
 
 import * as api from "../../Services/ProductsServices";
@@ -18,6 +19,7 @@ const Products = ({
   const [select, setSelect] = useState("");
   const [checkboxValue, setCheckBoxValue] = useState([]);
   const [sortItem, setSortItem] = useState("");
+  const [size, setSize] = useState("");
 
   useEffect(() => {
     const filteredAllProducts = products.filter((product) => {
@@ -96,41 +98,44 @@ const Products = ({
                       />
                     </div>
 
-                    <div className="text-center">
+                    <div className="text-center text-xl">
                       <p className="my-1.5">{product.name}</p>
                     </div>
-                    <div className="text-center">
+
+                    <div className="text-center my-4 ">
+                      <SelectSize size={size} setSize={setSize} />
+                    </div>
+
+                    <div className="text-center ">
                       <p className="my-1.5">{product.gender}</p>
                     </div>
                     <div className="text-center">
                       <p className="my-1.5">{product.city}</p>
                     </div>
-                    <div className="text-center">
+                    <div className="text-center  text-lg">
                       <p className="my-1.5">{product.price}$</p>
                     </div>
 
-                    <div className="text-center">
+                    <div className="text-center my-4">
                       <button
                         type="button"
-                        className="bg-violet-500 py-0.5 px-2 rounded	 "
+                        className="bg-blue-400 py-0.5 px-2 rounded	 "
                       >
                         +
                       </button>
-                      <span className="px-1.5 font-semibold">
-                        {product.qty}
-                      </span>
+                      <span className="px-1.5  text-lg">{product.qty}</span>
                       <button
                         type="button"
-                        className="bg-violet-500 py-0.5 px-2 rounded	"
+                        className="bg-blue-400 py-0.5 px-2 rounded	"
                       >
                         -
                       </button>
                     </div>
 
-                    <div className="text-center mb-8 mt-4">
+                    <div className="text-center mb-8 mt-6">
                       <button
                         type="button"
-                        className="bg-violet-500 py-2 px-4 rounded	 "
+                        className="bg-blue-400 py-2 px-4 rounded	 "
                       >
                         Add to cart
                       </button>
@@ -160,26 +165,23 @@ const Products = ({
           />
         </div>
 
-        <div className="flex justify-center items-center lg:flex-none lg:flex-col lg:flex-col-reverse ">
-          <div className="text-center mt-6 w-6/12 lg:w-fit">
-            <Select select={select} setSelect={setSelect} />
-          </div>
-
-          <div className="text-center mt-6 w-4/12 lg:w-11/12 m-auto rounded-lg">
-            <Sort sortItem={sortItem} setSortItem={setSortItem} />
-          </div>
+        <div className="text-center w-11/12 m-auto rounded-lg">
+          <Selected select={select} setSelect={setSelect} />
         </div>
-        <div className="flex justify-around items-center mt-8 lg:flex-none  lg:flex-col lg:flex-col-reverse">
-          <div className="text-center mt-6">
-            <CheckBox
-              checkboxValue={checkboxValue}
-              setCheckBoxValue={setCheckBoxValue}
-            />
-          </div>
 
-          <div className="self-end lg:self-auto lg:text-center ">
-            <Radio gender={gender} setGender={setGender} />
-          </div>
+        <div className="text-center w-11/12 m-auto rounded-lg mt-6">
+          <Sort sortItem={sortItem} setSortItem={setSortItem} />
+        </div>
+
+        <div className="text-right mt-6 xl:mr-4 lg:mr-0">
+          <CheckBox
+            checkboxValue={checkboxValue}
+            setCheckBoxValue={setCheckBoxValue}
+          />
+        </div>
+
+        <div className="mt-6 mr-4 lg:text-right flex justify-end items-center">
+          <Radio gender={gender} setGender={setGender} />
         </div>
       </div>
     </div>

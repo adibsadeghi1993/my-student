@@ -5,9 +5,10 @@ import Layout from "./Layout/Layout";
 
 import { Routes, Route } from "react-router-dom";
 import EditUser from "./Components/EditUser/EditUser";
-import Home from "./Pages/Home/Home"
+import Home from "./Pages/Users/Users"
 import Products from "./Pages/Products/Products";
 import SiqnUp from "./Pages/SiqnUp/SiqnUp";
+import Users from "./Pages/Users/Users";
 
 
 
@@ -19,10 +20,8 @@ function App() {
   return (
     <Layout>
       <Routes>
-        <Route path="/" element={<Home users={users} setUser={setUser} />} />
-
         <Route
-          path="/products"
+          path="/"
           element={
             <Products
               products={products}
@@ -32,6 +31,9 @@ function App() {
             />
           }
         />
+
+      <Route path="/users" element={<Users />} />
+
 
         <Route
           path="/siqnup"

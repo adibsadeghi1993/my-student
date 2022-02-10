@@ -12,8 +12,8 @@ const CheckBox = ({ setCheckBoxValue, checkboxValue }) => {
     }
   };
   return (
-    <div>
-        <label className="ml-4"> کانادا</label>
+    <div className="md:mr-8 lg:mr-0">
+        <label className="ml-4 mr-1.5 lg:ml-2"> کانادا </label>
         <input
           type="checkbox"
           name="city"
@@ -22,7 +22,7 @@ const CheckBox = ({ setCheckBoxValue, checkboxValue }) => {
           onChange={checkBoxHandler}
         />
 
-        <label className="ml-4"> امریکا</label>
+        <label className="ml-4 mr-1.5"> امریکا </label>
         <input
           type="checkbox"
           name="city"
@@ -31,7 +31,7 @@ const CheckBox = ({ setCheckBoxValue, checkboxValue }) => {
           onChange={checkBoxHandler}
         />
 
-        <label className="ml-4"> استرالیا</label>
+        <label className="ml-4 mr-1.5"> استرالیا</label>
         <input
           type="checkbox"
           name="city"
@@ -39,6 +39,7 @@ const CheckBox = ({ setCheckBoxValue, checkboxValue }) => {
           checked={checkboxValue.includes("AS")}
           onChange={checkBoxHandler}
         />
+        
     </div>
   );
 };
