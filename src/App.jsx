@@ -7,9 +7,9 @@ import { Routes, Route } from "react-router-dom";
 import EditUser from "./Components/EditUser/EditUser";
 import Products from "./Pages/Products/Products";
 import SiqnUp from "./Pages/SiqnUp/SiqnUp";
+import CartItems from "./Pages/CartItems/CartItems";
 import Users from "./Pages/Users/Users";
 import Box from "@mui/material/Box";
-import CartItems from "./Components/CartItems/CartItems";
 
 function App() {
   const [users, setUser] = useState([]);

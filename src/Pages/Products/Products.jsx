@@ -141,7 +141,6 @@ const Products = ({
                       </div>
 
                       <div className="text-center mb-8 mt-6">
-                        <Link to="/cart">
                           <button
                             type="button"
                             onClick={() => AddToCartHandler(product)}
@@ -149,7 +148,7 @@ const Products = ({
                           >
                             Add to cart
                           </button>
-                        </Link>
+                    
                       </div>
                     </div>
                   </div>
