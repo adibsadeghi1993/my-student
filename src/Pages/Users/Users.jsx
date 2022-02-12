@@ -69,6 +69,14 @@ const Users = ({ users, setUser }) => {
 
 export default Users;
 
+
+
+
+
+
+
+
+
 // axios.get(`http://localhost:4000/user/${id}`)
 // .then(()=>{
 

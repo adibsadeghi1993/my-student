@@ -5,49 +5,62 @@ import Layout from "./Layout/Layout";
 
 import { Routes, Route } from "react-router-dom";
 import EditUser from "./Components/EditUser/EditUser";
-import Home from "./Pages/Users/Users"
 import Products from "./Pages/Products/Products";
 import SiqnUp from "./Pages/SiqnUp/SiqnUp";
 import Users from "./Pages/Users/Users";
-
-
+import Box from "@mui/material/Box";
+import CartItems from "./Components/CartItems/CartItems";
 
 function App() {
   const [users, setUser] = useState([]);
   const [products, setProducts] = useState([]);
   const [filteredproducts, setFilteredproducts] = useState([]);
+  const [cartItems, setCartItems] = useState([]);
+  const [size, setSize] = useState("");
 
   return (
-    <Layout>
-      <Routes>
-        <Route
-          path="/"
-          element={
-            <Products
-              products={products}
-              setProducts={setProducts}
-              setFilteredproducts={setFilteredproducts}
-              filteredproducts={filteredproducts}
-            />
-          }
-        />
+    <Box sx={{ bgcolor: "background.default", color: "text.primary" }}>
+      <Layout>
+        <Routes>
+          <Route
+            path="/"
+            element={
+              <Products
+                products={products}
+                setProducts={setProducts}
+                cartItems={cartItems}
+                setCartItems={setCartItems}
+                size={size}
+                setSize={setSize}
+                setFilteredproducts={setFilteredproducts}
+                filteredproducts={filteredproducts}
+              />
+            }
+          />
 
-      <Route path="/users" element={<Users />} />
+          <Route
+            path="/cart"
+            element={
+              <CartItems size={size} cartItems={cartItems} setCartItems={setCartItems} />
+            }
+          />
 
 
-        <Route
-          path="/siqnup"
-          element={<SiqnUp users={users} setUser={setUser} />}
-        />
+          <Route path="/users" element={<Users />} />
 
-        <Route
-          path="/edituser/:id"
-          element={<EditUser users={users} setUser={setUser} />}
-        />
-      </Routes>
-    </Layout>
+          <Route
+            path="/siqnup"
+            element={<SiqnUp users={users} setUser={setUser} />}
+          />
+
+          <Route
+            path="/edituser/:id"
+            element={<EditUser users={users} setUser={setUser} />}
+          />
+        </Routes>
+      </Layout>
+    </Box>
   );
 }
 
 export default App;
-

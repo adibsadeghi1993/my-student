@@ -2,17 +2,24 @@ import React, { useState } from "react";
 
 import { FaTimes } from "react-icons/fa";
 import { FaBars } from "react-icons/fa";
+import { NavLink ,Link } from "react-router-dom";
+import { useContext } from "react";
+import { ColorModeContext } from "../../Context/DarkModeContext";
+import IconButton from "@mui/material/IconButton";
+import Brightness4Icon from "@mui/icons-material/Brightness4";
+import Brightness7Icon from "@mui/icons-material/Brightness7";
 
-import { NavLink } from "react-router-dom";
+import { FiShoppingCart } from "react-icons/fi";
 
 import "./Navbar.css";
 
 const Navigation = () => {
+  const { mode, toggleColorMode } = useContext(ColorModeContext);
   const [open, setOpen] = useState(false);
   const handleClick = () => setOpen(!open);
 
   const style = ({ isActive }) => ({
-    color: isActive ? "#701a75" : "",
+    color: isActive ? "#7f92f4" : "",
   });
 
   return (
@@ -24,11 +31,15 @@ const Navigation = () => {
         </NavLink>
 
         <ul
-          className={`${
+          className={` ${
             open ? "" : "hidden"
-          } flex flex-col absolute top-12 left-0 right-0 h-24 w-full shadow-lg transition-all bg-white h-28 cursor-pointer
-          lg:flex lg:flex-row lg:relative lg:top-0 lg:w-fit lg:h-12 lg:items-center lg:shadow-none lg:h-fit `}
+          } flex flex-col absolute top-12 left-0 right-0 h-44	 w-full shadow-lg z-10 transition-all cursor-pointer
+          lg:flex lg:flex-row lg:relative lg:top-0 lg:w-fit lg:h-12 lg:items-center lg:z-0 lg:shadow-none lg:h-fit`}
         >
+          <IconButton onClick={toggleColorMode} color="inherit">
+            {mode === "dark" ? <Brightness7Icon /> : <Brightness4Icon />}
+          </IconButton>
+
           <li
             className={`navItem 
             mr-4 ml-4 pl-4 mb-2 mt-4
@@ -38,7 +49,7 @@ const Navigation = () => {
             <NavLink
               className="lg:mr-8 text-lg"
               to="/"
-              style={style}
+              // style={style}
               onClick={handleClick}
             >
               Product
@@ -53,16 +64,26 @@ const Navigation = () => {
             <NavLink
               to="/user"
               className="lg:mr-8 text-lg"
-              style={style}
+              // style={style}
               onClick={handleClick}
             >
               User
             </NavLink>
           </li>
+
+          <button className="text-2xl" >
+            <Link to="/cart">
+              <FiShoppingCart />
+            </Link>
+          </button>
         </ul>
 
         <div onClick={handleClick} className="block text-blue-800 lg:hidden ">
-          {open ? <FaTimes className="text-2xl" /> : <FaBars  className="text-2xl" />}
+          {open ? (
+            <FaTimes className="text-2xl" />
+          ) : (
+            <FaBars className="text-2xl" />
+          )}
         </div>
       </div>
     </header>
@@ -71,25 +92,13 @@ const Navigation = () => {
 
 export default Navigation;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // after:content-[''] after:block
 // after:bg-transparent after:transition-all after:duration-500
 // hover:after:w-full  hover:after:bg-red-500"
+
+// const style = ({ isActive }) => ({
+//   color: isActive ? "#f6f6f6" :"yellow"
+// });
 
 // className={(navData) => {
 //     if (navData.isActive) {
@@ -110,6 +119,11 @@ export default Navigation;
 //     return "";
 //   }
 // }}
+
+// className={(navData) =>
+//   navData.isActive ? styles.activeTab : styles.inactiveTab
+// }
+
 // to="/"
 // onClick={handleClick}
 // >

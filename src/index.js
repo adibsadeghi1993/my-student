@@ -3,14 +3,17 @@ import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./App";
 
+import { ColorContextProvider } from "./Context/DarkModeContext";
+
 import { BrowserRouter } from "react-router-dom";
 
-import '@themesberg/flowbite';
-
+import "@themesberg/flowbite";
 
 ReactDOM.render(
-  <BrowserRouter>
-    <App />
-  </BrowserRouter>,
+  <ColorContextProvider>
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
+  </ColorContextProvider>,
   document.getElementById("root")
 );

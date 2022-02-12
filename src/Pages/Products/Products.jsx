@@ -4,12 +4,17 @@ import Radio from "../../Components/Radio/Radio";
 import Selected from "../../Components/Select/Selected";
 import SelectSize from "../../Components/SelectSize/SelectSize";
 import Sort from "../../Components/Sort/Sort";
+import {Link } from "react-router-dom";
+
 
 import * as api from "../../Services/ProductsServices";
 
 const Products = ({
   products,
   setProducts,
+  cartItems,
+  setCartItems,
+  size,setSize,
   setFilteredproducts,
   filteredproducts,
 }) => {
@@ -19,7 +24,7 @@ const Products = ({
   const [select, setSelect] = useState("");
   const [checkboxValue, setCheckBoxValue] = useState([]);
   const [sortItem, setSortItem] = useState("");
-  const [size, setSize] = useState("");
+
 
   useEffect(() => {
     const filteredAllProducts = products.filter((product) => {
@@ -78,6 +83,21 @@ const Products = ({
     fetchAllproducts();
   }, []);
 
+  const AddToCartHandler = (item) => {
+    const updatedProduct = [...cartItems];
+    const productFind = updatedProduct.find((p) => p.id === item.id);
+    console.log(productFind); //productFind= undefined ==falsy
+
+    if (!productFind) {
+      setCartItems([...updatedProduct, { ...item, qty: 1 }]);
+    } else {
+      const newProduct = updatedProduct.map((p) =>
+        p.id === productFind.id ? { ...productFind, qty: productFind.qty + 1 } : p
+      );
+      setCartItems(newProduct);
+    }
+  };
+
   return (
     <div className="flex flex-col-reverse lg:grid lg:grid-cols-4   container  gap-2 mx-auto mt-16">
       <div className="lg:col-start-1 lg:col-end-4 md: mt-8 lg:mt-0">
@@ -87,58 +107,50 @@ const Products = ({
               {filteredproducts.map((product) => {
                 return (
                   <div
-                    className="box shadow-lg rounded-lg bg-slate-100 "
+                    className="box shadow-lg rounded-lg bg-neutral-100"
                     key={product.id}
                   >
-                    <div className="flex justify-center mt-8">
+                    <div className="flex justify-center my-4 ">
                       <img
                         src={product.img}
-                        className="w-8/12 rounded-lg "
+                        className="w-11/12 rounded-lg "
                         alt="img"
                       />
                     </div>
 
-                    <div className="text-center text-xl">
-                      <p className="my-1.5">{product.name}</p>
+                    <div className="flex justify-center items-baseline flex-row-reverse">
+                      <div className="text-center text-xl">
+                        <p className="my-1.5 text-black">{product.name}</p>
+                      </div>
+                      <div className="text-center text-black ">
+                        <p className="my-1.5">{product.gender}-</p>
+                      </div>
+
+                      <div className="text-center text-black">
+                        <p className="my-1.5">{product.city}-</p>
+                      </div>
                     </div>
 
-                    <div className="text-center my-4 ">
+                    <div className="text-center my-4 text-black">
                       <SelectSize size={size} setSize={setSize} />
                     </div>
 
-                    <div className="text-center ">
-                      <p className="my-1.5">{product.gender}</p>
-                    </div>
-                    <div className="text-center">
-                      <p className="my-1.5">{product.city}</p>
-                    </div>
-                    <div className="text-center  text-lg">
-                      <p className="my-1.5">{product.price}$</p>
-                    </div>
+                    <div className="flex items-baseline justify-around	">
+                      <div className="text-center text-black  text-lg">
+                        <p className="my-1.5">{product.price}$</p>
+                      </div>
 
-                    <div className="text-center my-4">
-                      <button
-                        type="button"
-                        className="bg-blue-400 py-0.5 px-2 rounded	 "
-                      >
-                        +
-                      </button>
-                      <span className="px-1.5  text-lg">{product.qty}</span>
-                      <button
-                        type="button"
-                        className="bg-blue-400 py-0.5 px-2 rounded	"
-                      >
-                        -
-                      </button>
-                    </div>
-
-                    <div className="text-center mb-8 mt-6">
-                      <button
-                        type="button"
-                        className="bg-blue-400 py-2 px-4 rounded	 "
-                      >
-                        Add to cart
-                      </button>
+                      <div className="text-center mb-8 mt-6">
+                        <Link to="/cart">
+                          <button
+                            type="button"
+                            onClick={() => AddToCartHandler(product)}
+                            className="bg-blue-400 py-2 px-4 rounded"
+                          >
+                            Add to cart
+                          </button>
+                        </Link>
+                      </div>
                     </div>
                   </div>
                 );
@@ -150,7 +162,7 @@ const Products = ({
         )}
       </div>
 
-      <div className="lg:col-start-4 lg:col-end-5  mt-16  ">
+      <div className=" mt-14 lg:col-start-4 lg:col-end-5   lg:mt-16  ">
         <div className="mb-6 ">
           <input
             type="search"
@@ -189,3 +201,21 @@ const Products = ({
 };
 
 export default Products;
+
+// **********
+
+
+// **********
+// const updatedProduct =[...cartItems]
+// const index =updatedProduct.findIndex((p)=>p.id ===item.id)
+// console.log(index); // -1
+// if(index ===-1){
+//   setCartItems([...updatedProduct ,{...item ,qty:1}])
+// }else{
+//     const product ={...updatedProduct[index]}
+//     console.log(product)
+
+//     const newProduct = { ...product, qty: product.qty + 1 };
+//     updatedProduct[index] = newProduct;
+//     setCartItems(updatedProduct)
+// }

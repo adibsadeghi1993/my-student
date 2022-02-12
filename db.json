@@ -27,7 +27,7 @@
       "desc": "کفش خوب و قشنگی است"
     },
     {
-      "id": 4,
+      "id": 3,
       "img": "http://www.coca.ir/wp-content/uploads/2017/03/men-boys-shoes-photo-gallery-3.jpg",
       "name": "کفش  گوچی",
       "category": "گوچی",
@@ -40,7 +40,7 @@
       "desc": "کفش خوب و قشنگی است"
     },
     {
-      "id": 5,
+      "id": 4,
       "img": "http://www.coca.ir/wp-content/uploads/2017/03/men-boys-shoes-photo-gallery-4.jpg",
       "name": "کفش ریبوک",
       "category": "ریبوک",
@@ -53,7 +53,7 @@
       "desc": "کفش خوب و قشنگی است"
     },
     {
-      "id": 6,
+      "id": 5,
       "img": "http://www.coca.ir/wp-content/uploads/2017/03/nike-men-boys-sport-shoes-1-1.jpg",
       "name": "کفش  اسکیجر",
       "category": "اسکیجر",
@@ -66,7 +66,7 @@
       "desc": "کفش خوب و قشنگی است"
     },
     {
-      "id": 7,
+      "id": 6,
       "img": "http://www.coca.ir/wp-content/uploads/2017/03/men-boys-shoes-photo-gallery-5.jpg",
       "name": "کفش  گوچی",
       "category": "گوچی",
@@ -79,7 +79,7 @@
       "desc": "کفش خوب و قشنگی است"
     },
     {
-      "id": 8,
+      "id": 7,
       "img": "http://www.coca.ir/wp-content/uploads/2017/03/men-boys-shoes-photo-gallery-6.jpg",
       "name": "کفش  ونس ",
       "category": "ونس",
@@ -92,7 +92,7 @@
       "desc": "کفش خوب و قشنگی است"
     },
     {
-      "id": 9,
+      "id": 8,
       "img": "http://www.coca.ir/wp-content/uploads/2017/03/men-boys-shoes-photo-gallery-7.jpg",
       "name": "کفش  تامی ",
       "category": "تامی",
@@ -105,7 +105,7 @@
       "desc": "کفش خوب و قشنگی است"
     },
     {
-      "id": 10,
+      "id": 9,
       "img": "http://www.coca.ir/wp-content/uploads/2017/03/men-boys-shoes-photo-gallery-8.jpg",
       "name": " کفش  اسکیچرز ",
       "category": "اسکیچرز",
@@ -118,9 +118,9 @@
       "desc": "کفش خوب و قشنگی است"
     },
     {
-      "id": 11,
+      "id": 10,
       "img": "http://www.coca.ir/wp-content/uploads/2017/03/nike-men-boys-sport-shoes-2-1.jpg",
-      "name": " کفش  نایک مدل ستاره",
+      "name": " کفش  نایک",
       "category": "نایک",
       "gender": "مردانه",
       "qty": "0",
@@ -131,7 +131,7 @@
       "desc": "کفش خوب و قشنگی است"
     },
     {
-      "id": 12,
+      "id": 11,
       "img": "http://www.coca.ir/wp-content/uploads/2017/03/men-boys-shoes-photo-gallery-9.jpg",
       "name": " کفش  تامی   ",
       "category": "تامی",
@@ -144,7 +144,7 @@
       "desc": "کفش خوب و قشنگی است"
     },
     {
-      "id": 13,
+      "id": 12,
       "img": "http://www.coca.ir/wp-content/uploads/2017/03/men-boys-shoes-photo-gallery-10.jpg",
       "name": " کفش  آدیداس   ",
       "category": "آدیداس",
@@ -157,7 +157,7 @@
       "desc": "کفش خوب و قشنگی است"
     },
     {
-      "id": 14,
+      "id": 13,
       "img": "http://www.coca.ir/wp-content/uploads/2017/03/nike-men-boys-sport-shoes-3-1.jpg",
       "name": " کفش  آدیداس   ",
       "category": "ایداس",
@@ -171,7 +171,7 @@
     },
 
     {
-      "id": 15,
+      "id": 14,
       "img": "http://www.coca.ir/wp-content/uploads/2017/03/nike-men-boys-sport-shoes-7.jpg",
       "name": " کفش  نایک   ",
       "category": "نایک",
@@ -184,9 +184,9 @@
       "desc": "کفش خوب و قشنگی است"
     },
     {
-      "id": 16,
+      "id": 15,
       "img": "http://www.coca.ir/wp-content/uploads/2017/03/nike-men-boys-sport-shoes-15.jpg",
-      "name": "  کفش  نایک مخصوص دویدن   ",
+      "name": "  کفش  نایک ",
       "category": "نایک",
       "gender": "زنانه",
       "qty": "0",
@@ -197,7 +197,7 @@
       "desc": "کفش خوب و قشنگی است"
     },
     {
-      "id": 17,
+      "id": 16,
       "img": "http://www.coca.ir/wp-content/uploads/2017/03/beautiful-men-boys-sport-shoes-model-9.jpg",
       "name": "  کفش  ریبوک     ",
       "category": "ریبوک",
@@ -210,7 +210,7 @@
       "desc": "کفش خوب و قشنگی است"
     },
     {
-      "id": 18,
+      "id": 17,
       "img": "http://www.coca.ir/wp-content/uploads/2017/03/nike-gym-men-boys-shoes-10.jpg",
       "name": "  کفش  آدیداس     ",
       "category": "آدیداس",
@@ -223,7 +223,7 @@
       "desc": "کفش خوب و قشنگی است"
     },
     {
-      "id": 19,
+      "id": 18,
       "img": "http://www.coca.ir/wp-content/uploads/2017/03/men-boys-shoes-photo-gallery-6.jpg",
       "name": "  کفش  نایک     ",
       "category": "نایک",
@@ -236,7 +236,7 @@
       "desc": "کفش خوب و قشنگی است"
     },
     {
-      "id": 20,
+      "id": 19,
       "img": "http://www.coca.ir/wp-content/uploads/2017/03/nike-gym-men-boys-shoes-7.jpg",
       "name": "  کفش  ریبوک     ",
       "category": "ریبوک",
@@ -249,7 +249,7 @@
       "desc": "کفش خوب و قشنگی است"
     },
     {
-      "id": 21,
+      "id": 20,
       "img": "http://www.coca.ir/wp-content/uploads/2017/03/nike-men-boys-sport-shoes-10-1.jpg",
       "name": "  کفش  اسکیچرز     ",
       "category": "اسکیچرز",
@@ -262,7 +262,7 @@
       "desc": "کفش خوب و قشنگی است"
     },
     {
-      "id": 22,
+      "id": 21,
       "img": "http://www.coca.ir/wp-content/uploads/2017/03/nike-men-boys-sport-shoes-9-1.jpg",
       "name": "  کفش  اسکیچرز     ",
       "category": "اسکیچرز",
@@ -275,7 +275,7 @@
       "desc": "کفش خوب و قشنگی است"
     },
     {
-      "id": 23,
+      "id": 22,
       "img": "http://www.coca.ir/wp-content/uploads/2017/03/nike-men-boys-sport-shoes-8-1.jpg",
       "name": "  کفش  آدیداس     ",
       "category": "آدیداس",
@@ -288,7 +288,7 @@
       "desc": "کفش خوب و قشنگی است"
     },
     {
-      "id": 24,
+      "id": 23,
       "img": "http://www.coca.ir/wp-content/uploads/2017/03/nike-gym-men-boys-shoes-4.jpg",
       "name": "  کفش  ریبوک     ",
       "category": "ریبوک",
