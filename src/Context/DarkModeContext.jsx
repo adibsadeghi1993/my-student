@@ -1,17 +1,19 @@
-import { createContext, useMemo, useState } from "react";
+import { createContext, useMemo, useState,useEffect } from "react";
 import { ThemeProvider, createTheme } from "@mui/material";
 
 import { purple,green,grey,amber ,deepOrange} from '@mui/material/colors';
 
-export const ColorModeContext = createContext({
-  toggleMode: () => {},
-  mode: "light",
-});
+export const ColorModeContext = createContext();
 
 
 
 export const ColorContextProvider = ({ children }) => {
   const [mode, setMode] = useState(`light`);
+
+
+//   useEffect(()=>{
+// localStorage.setItem("mode",JSON.stringify(mode))
+//   },[mode])
 
   const colorMode = useMemo(
     () => ({
@@ -63,6 +65,7 @@ export const ColorContextProvider = ({ children }) => {
 
   return (
     <ColorModeContext.Provider value={colorMode}>
+      
       <ThemeProvider theme={theme}>{children}</ThemeProvider>
     </ColorModeContext.Provider>
   );

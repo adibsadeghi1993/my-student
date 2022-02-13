@@ -2,7 +2,7 @@ import React, { useState } from "react";
 
 import { FaTimes } from "react-icons/fa";
 import { FaBars } from "react-icons/fa";
-import { NavLink ,Link } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 import { useContext } from "react";
 import { ColorModeContext } from "../../Context/DarkModeContext";
 import IconButton from "@mui/material/IconButton";
@@ -13,9 +13,16 @@ import { FiShoppingCart } from "react-icons/fi";
 
 import "./Navbar.css";
 
-const Navigation = () => {
-  const { mode, toggleColorMode } = useContext(ColorModeContext);
+const Navigation = ({ cartItems }) => {
+  const {mode ,  toggleColorMode } = useContext(ColorModeContext);
+  
+ 
+  console.log(toggleColorMode)
   const [open, setOpen] = useState(false);
+
+  // const mode=JSON.parse(localStorage.getItem("mode"))
+
+  console.log(mode)
   const handleClick = () => setOpen(!open);
 
   const style = ({ isActive }) => ({
@@ -33,8 +40,9 @@ const Navigation = () => {
         <ul
           className={` ${
             open ? "" : "hidden"
-          } flex flex-col absolute top-12 left-0 right-0 h-44	 w-full shadow-lg z-10 transition-all cursor-pointer
-          lg:flex lg:flex-row lg:relative lg:top-0 lg:w-fit lg:h-12 lg:items-center lg:z-0 lg:shadow-none lg:h-fit`}
+          } flex flex-col absolute top-12  left-0 right-0 h-44	 w-full shadow-lg z-10 transition-all cursor-pointer
+          lg:flex lg:flex-row lg:relative lg:top-0 lg:w-fit lg:h-12 lg:items-center lg:z-0 lg:shadow-none lg:h-fit   
+          }`}
         >
           <IconButton onClick={toggleColorMode} color="inherit">
             {mode === "dark" ? <Brightness7Icon /> : <Brightness4Icon />}
@@ -71,8 +79,13 @@ const Navigation = () => {
             </NavLink>
           </li>
 
-          <button className="text-2xl" >
+          <button className="text-2xl">
             <Link to="/cart">
+              {cartItems.length !== 0 && (
+                <span className="absolute text-base text-white	 bg-indigo-700 top-0 -right-4	 rounded-3xl w-6 h-6	 d-flex justify-center items-center		">
+                  {cartItems.filter((c) => c.qty > 0).length}
+                </span>
+              )}
               <FiShoppingCart />
             </Link>
           </button>
@@ -91,6 +104,24 @@ const Navigation = () => {
 };
 
 export default Navigation;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// ${
+//   mode === "dark" ? "sm:bg-indigo-700" : "sm:bg-red-500"
+
 
 // after:content-[''] after:block
 // after:bg-transparent after:transition-all after:duration-500

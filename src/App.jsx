@@ -20,7 +20,7 @@ function App() {
 
   return (
     <Box sx={{ bgcolor: "background.default", color: "text.primary" }}>
-      <Layout>
+      <Layout cartItems={cartItems}>
         <Routes>
           <Route
             path="/"

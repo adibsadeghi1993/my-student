@@ -15,14 +15,14 @@ const CartItems = ({ cartItems, size }) => {
     );
   }
   return (
-    <div className="grid grid-cols-4 gap-4">
+    <div className="grid grid-cols-4 gap-4 w-5/6 mx-auto">
       {cartItems.map((product) => {
         return (
-          <section className="col-start-1 col-end-4 w-10/12 m-auto mt-12">
-            <div className="grid grid-cols-2 gap-2 bg-neutral-100 shadow-lg">
-              <div className="col-start-1 col-end-2  ">
-                <div className="flex justify-center ">
-                  <img src={product.img} className="w-2/4	 rounded-lg" alt="" />
+          <section className="col-start-1 col-end-4 w-4/6	 m-auto mt-12">
+            <div className="grid grid-cols-2 gap-2 bg-white border border-solid	border-gray-200	 shadow-lg">
+              <div className="col-start-1 col-end-2 flex justify-center ">
+                <div className="flex justify-center items-center">
+                  <img src={product.img} className="w-36	 rounded-lg" alt="img" />
                 </div>
               </div>
               <div className="col-start-2 col-end-3 ">
@@ -56,7 +56,7 @@ const CartItems = ({ cartItems, size }) => {
         );
       })}
 
-      <section className="col-start-4 col-end-5 row-start-1 row-end-2">
+      <section className="col-start-4 col-end-5 row-start-1 row-end-2 mt-12">
         <div className=" bg-neutral-100 shadow-lg">
           <p> قیمت کل </p>
         </div>

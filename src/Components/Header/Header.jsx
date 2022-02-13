@@ -2,10 +2,10 @@ import React from "react";
 
 import Navbar from "./Navbar";
 
-const Header = () => {
+const Header = ({cartItems}) => {
   return (
     <div>
-      <Navbar />
+      <Navbar cartItems={cartItems} />
     </div>
   );
 };

@@ -110,10 +110,10 @@ const Products = ({
                     className="box shadow-lg rounded-lg bg-neutral-100"
                     key={product.id}
                   >
-                    <div className="flex justify-center my-4 ">
+                    <div className="flex justify-center">
                       <img
                         src={product.img}
-                        className="w-11/12 rounded-lg "
+                        className="w-3/5			 rounded-lg "
                         alt="img"
                       />
                     </div>
@@ -140,11 +140,11 @@ const Products = ({
                         <p className="my-1.5">{product.price}$</p>
                       </div>
 
-                      <div className="text-center mb-8 mt-6">
+                      <div className="text-center mb-8 mt-4">
                           <button
                             type="button"
                             onClick={() => AddToCartHandler(product)}
-                            className="bg-blue-400 py-2 px-4 rounded"
+                            className="bg-indigo-700	text-white py-2 px-4 rounded"
                           >
                             Add to cart
                           </button>
