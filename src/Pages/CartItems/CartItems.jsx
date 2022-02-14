@@ -4,9 +4,10 @@ import { FiShoppingCart } from "react-icons/fi";
 import { FiTrash2 } from "react-icons/fi";
 
 const CartItems = ({ cartItems, size, setCartItems }) => {
-
-  const totalprice = cartItems.reduce((acc,curr)=>acc +curr.price *curr.qty , 0 )
-  
+  const totalprice = cartItems.reduce(
+    (acc, curr) => acc + curr.price * curr.qty,
+    0
+  );
 
   const incHandler = (item) => {
     const findProduct = cartItems.find((p) => p.id === item.id);
@@ -49,7 +50,10 @@ const CartItems = ({ cartItems, size, setCartItems }) => {
           <FiShoppingCart />
         </div>
         <p className="text-black text-xl	 mt-8">your basket is empty </p>
-        <Link to="/" className="text-red-400 text-2xl	mt-2"> go to products page</Link>
+        <Link to="/" className="text-red-400 text-2xl	mt-2">
+          {" "}
+          go to products page
+        </Link>
       </div>
     );
   }
@@ -125,7 +129,7 @@ const CartItems = ({ cartItems, size, setCartItems }) => {
               type="button"
               className="bg-indigo-700	text-white py-2 px-4 rounded"
             >
-             Proceed Checkout
+              Proceed Checkout
             </button>
           </div>
         </div>
@@ -135,33 +139,6 @@ const CartItems = ({ cartItems, size, setCartItems }) => {
 };
 
 export default CartItems;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 //  <p> {product.name}</p>
 

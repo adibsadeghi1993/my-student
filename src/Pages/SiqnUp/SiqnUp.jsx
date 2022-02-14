@@ -43,7 +43,7 @@ const SiqnUp = ({ users, setUser }) => {
 
   return (
     <>
-      <h1 className="text-center text-lg font-bold "> SiqnUp</h1>
+      <h1 className="text-center text-lg font-bold "></h1>
 
       <div className="w-full max-w-xs m-auto mt-9">
         <form

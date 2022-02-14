@@ -4,6 +4,8 @@ import Radio from "../../Components/Radio/Radio";
 import Selected from "../../Components/Select/Selected";
 import SelectSize from "../../Components/SelectSize/SelectSize";
 import Sort from "../../Components/Sort/Sort";
+import { useToasts } from 'react-toast-notifications';
+
 import {Link } from "react-router-dom";
 
 
@@ -25,6 +27,7 @@ const Products = ({
   const [checkboxValue, setCheckBoxValue] = useState([]);
   const [sortItem, setSortItem] = useState("");
 
+  const { addToast } = useToasts();
 
   useEffect(() => {
     const filteredAllProducts = products.filter((product) => {
@@ -84,6 +87,9 @@ const Products = ({
   }, []);
 
   const AddToCartHandler = (item) => {
+
+    addToast("success and see the CartItems", { appearance: 'success' ,autoDismiss: true, });
+
     const updatedProduct = [...cartItems];
     const productFind = updatedProduct.find((p) => p.id === item.id);
     console.log(productFind); //productFind= undefined ==falsy

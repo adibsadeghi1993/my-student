@@ -8,6 +8,7 @@ import { ColorModeContext } from "../../Context/DarkModeContext";
 import IconButton from "@mui/material/IconButton";
 import Brightness4Icon from "@mui/icons-material/Brightness4";
 import Brightness7Icon from "@mui/icons-material/Brightness7";
+import { BiUserCircle } from "react-icons/bi";
 
 import { FiShoppingCart } from "react-icons/fi";
 
@@ -36,7 +37,7 @@ const Navigation = ({ cartItems }) => {
         <ul
           className={` ${
             open ? "" : "hidden"
-          } flex flex-col absolute top-12  left-0 right-0 h-48 bg-white	w-full shadow-lg z-10 transition-all cursor-pointer
+          } flex flex-col absolute top-12  left-0 right-0 h-60	bg-white	w-full shadow-lg z-10 transition-all cursor-pointer
           lg:flex lg:flex-row lg:relative lg:top-0 lg:w-fit lg:h-12 lg:items-center lg:z-0 lg:shadow-none lg:h-fit   
           }`}
         >
@@ -77,6 +78,14 @@ const Navigation = ({ cartItems }) => {
             </NavLink>
           </li>
 
+          <NavLink
+            to="/login"
+            className=" mr-4 ml-4 pl-4 mt-4  text-4xl lg:mt-0 text-blue-500"
+            onClick={handleClick}
+          >
+            <BiUserCircle />
+          </NavLink>
+
           <button className=" text-lg mr-4 ml-4 pl-4 mt-4  lg:mr-0 lg:ml-0 lg:pl-0 lg:mt-0 lg:text-xl">
             <Link to="/cart" onClick={handleClick}>
               {cartItems.length !== 0 && (
@@ -100,14 +109,17 @@ const Navigation = ({ cartItems }) => {
             <FaBars className="text-2xl" />
           )}
         </div>
-
-
       </div>
     </header>
   );
 };
 
 export default Navigation;
+
+
+
+
+
 
 
 

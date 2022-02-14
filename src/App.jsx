@@ -46,14 +46,12 @@ function App() {
             }
           />
 
-
-          <Route path="/users" element={<Users />} />
-
           <Route
-            path="/siqnup"
-            element={<SiqnUp users={users} setUser={setUser} />}
+            path="/login"
+            element={<SiqnUp />}
           />
 
+          <Route path="/users" element={<Users />} />
           <Route
             path="/edituser/:id"
             element={<EditUser users={users} setUser={setUser} />}
