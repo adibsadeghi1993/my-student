@@ -2,7 +2,7 @@ import React from "react";
 
 const Radio = ({ gender, setGender }) => {
   return (
-    <div className="flex md:mr-3.5 lg:mr-0 ">
+    <div className="flex mr-4 md:mr-3.5 lg:mr-0 ">
       <div className="mr-1">
         <label htmlFor="male" className="mr-1">
           male

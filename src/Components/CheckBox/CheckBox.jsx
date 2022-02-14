@@ -12,7 +12,7 @@ const CheckBox = ({ setCheckBoxValue, checkboxValue }) => {
     }
   };
   return (
-    <div className="md:mr-8 lg:mr-0">
+    <div className="mr-8 md:mr-8 lg:mr-0">
         <label className="ml-4 mr-1.5 lg:ml-2"> کانادا </label>
         <input
           type="checkbox"

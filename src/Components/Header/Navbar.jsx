@@ -14,15 +14,11 @@ import { FiShoppingCart } from "react-icons/fi";
 import "./Navbar.css";
 
 const Navigation = ({ cartItems }) => {
-  const {mode ,  toggleColorMode } = useContext(ColorModeContext);
-  
- 
-  console.log(toggleColorMode)
+  const { mode, toggleColorMode } = useContext(ColorModeContext);
   const [open, setOpen] = useState(false);
 
   // const mode=JSON.parse(localStorage.getItem("mode"))
 
-  console.log(mode)
   const handleClick = () => setOpen(!open);
 
   const style = ({ isActive }) => ({
@@ -40,13 +36,15 @@ const Navigation = ({ cartItems }) => {
         <ul
           className={` ${
             open ? "" : "hidden"
-          } flex flex-col absolute top-12  left-0 right-0 h-44	 w-full shadow-lg z-10 transition-all cursor-pointer
+          } flex flex-col absolute top-12  left-0 right-0 h-48 bg-white	w-full shadow-lg z-10 transition-all cursor-pointer
           lg:flex lg:flex-row lg:relative lg:top-0 lg:w-fit lg:h-12 lg:items-center lg:z-0 lg:shadow-none lg:h-fit   
           }`}
         >
-          <IconButton onClick={toggleColorMode} color="inherit">
-            {mode === "dark" ? <Brightness7Icon /> : <Brightness4Icon />}
-          </IconButton>
+          <div className="mr-4 ml-4 pl-4 mt-4  lg:mr-0 lg:ml-0 lg:pl-0 lg:mt-0">
+            <IconButton onClick={toggleColorMode} color="inherit">
+              {mode === "dark" ? <Brightness7Icon /> : <Brightness4Icon />}
+            </IconButton>
+          </div>
 
           <li
             className={`navItem 
@@ -79,14 +77,18 @@ const Navigation = ({ cartItems }) => {
             </NavLink>
           </li>
 
-          <button className="text-2xl">
-            <Link to="/cart">
+          <button className=" text-lg mr-4 ml-4 pl-4 mt-4  lg:mr-0 lg:ml-0 lg:pl-0 lg:mt-0 lg:text-xl">
+            <Link to="/cart" onClick={handleClick}>
               {cartItems.length !== 0 && (
-                <span className="absolute text-base text-white	 bg-indigo-700 top-0 -right-4	 rounded-3xl w-6 h-6	 d-flex justify-center items-center		">
+                <span
+                  className="absolute top-3/4	left-12	  text-white bg-indigo-700 
+                  w-6 h-6	d-flex justify-center items-center rounded-3xl
+                   lg:absolute lg:top-0 lg:left-56	 "
+                >
                   {cartItems.filter((c) => c.qty > 0).length}
                 </span>
               )}
-              <FiShoppingCart />
+              <FiShoppingCart className="w-6 h-6" />
             </Link>
           </button>
         </ul>
@@ -98,6 +100,8 @@ const Navigation = ({ cartItems }) => {
             <FaBars className="text-2xl" />
           )}
         </div>
+
+
       </div>
     </header>
   );
@@ -119,9 +123,11 @@ export default Navigation;
 
 
 
+
+
+
 // ${
 //   mode === "dark" ? "sm:bg-indigo-700" : "sm:bg-red-500"
-
 
 // after:content-[''] after:block
 // after:bg-transparent after:transition-all after:duration-500

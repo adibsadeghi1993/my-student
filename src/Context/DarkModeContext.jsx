@@ -11,10 +11,6 @@ export const ColorContextProvider = ({ children }) => {
   const [mode, setMode] = useState(`light`);
 
 
-//   useEffect(()=>{
-// localStorage.setItem("mode",JSON.stringify(mode))
-//   },[mode])
-
   const colorMode = useMemo(
     () => ({
       // The dark mode switch would invoke this method

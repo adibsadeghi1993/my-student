@@ -157,7 +157,7 @@ const Products = ({
             </div>
           </div>
         ) : (
-          <p>products is loading</p>
+          <p className="text-center text-red-400">products is loading.....</p>
         )}
       </div>
 
@@ -169,18 +169,18 @@ const Products = ({
             value={searchItem}
             onChange={(e) => setSearchItem(e.target.value)}
             className="bg-gray-50 border m-auto border-gray-300 text-gray-900 text-sm rounded-lg
-             focus:ring-blue-500 focus:border-blue-500 block w-11/12 p-2.5 
+             focus:ring-blue-500 focus:border-blue-500 block w-4/5	 md:w-11/12 p-2.5 
              dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400
               dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
             placeholder="search"
           />
         </div>
 
-        <div className="text-center w-11/12 m-auto rounded-lg">
+        <div className="text-center w-4/5	md:w-11/12 m-auto rounded-lg">
           <Selected select={select} setSelect={setSelect} />
         </div>
 
-        <div className="text-center w-11/12 m-auto rounded-lg mt-6">
+        <div className="text-center w-4/5	 md:w-11/12 m-auto rounded-lg mt-6">
           <Sort sortItem={sortItem} setSortItem={setSortItem} />
         </div>
 
@@ -200,6 +200,23 @@ const Products = ({
 };
 
 export default Products;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // **********
 
