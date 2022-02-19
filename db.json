@@ -169,7 +169,6 @@
       ],
       "desc": "کفش خوب و قشنگی است"
     },
-
     {
       "id": 14,
       "img": "http://www.coca.ir/wp-content/uploads/2017/03/nike-men-boys-sport-shoes-7.jpg",
@@ -301,9 +300,6 @@
       "desc": "کفش خوب و قشنگی است"
     }
   ],
-
-
-  
   "user": [
     {
       "id": 4,
@@ -316,6 +312,12 @@
       "email": "sami@gmail.com",
       "password": "789",
       "id": 5
+    },
+    {
+      "username": "mozhgan",
+      "email": "sara@gmail.com",
+      "password": "23445",
+      "id": 6
     }
   ]
 }

@@ -90,9 +90,9 @@ const Navigation = ({ cartItems }) => {
             <Link to="/cart" onClick={handleClick}>
               {cartItems.length !== 0 && (
                 <span
-                  className="absolute top-3/4	left-12	  text-white bg-indigo-700 
+                  className="absolute bottom-6 left-12	  text-white bg-indigo-700 
                   w-6 h-6	d-flex justify-center items-center rounded-3xl
-                   lg:absolute lg:top-0 lg:left-56	 "
+                   lg:absolute lg:bottom-4 lg:left-full	 "
                 >
                   {cartItems.filter((c) => c.qty > 0).length}
                 </span>

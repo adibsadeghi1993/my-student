@@ -6,10 +6,11 @@ import Layout from "./Layout/Layout";
 import { Routes, Route } from "react-router-dom";
 import EditUser from "./Components/EditUser/EditUser";
 import Products from "./Pages/Products/Products";
-import SiqnUp from "./Pages/SiqnUp/SiqnUp";
 import CartItems from "./Pages/CartItems/CartItems";
 import Users from "./Pages/Users/Users";
 import Box from "@mui/material/Box";
+import SiqnIn from "./Pages/Login/SignIn/SiqnIn";
+import SiqnUp from "./Pages/Login/SiqnUp/SiqnUp";
 
 function App() {
   const [users, setUser] = useState([]);
@@ -50,12 +51,13 @@ function App() {
             path="/login"
             element={<SiqnUp />}
           />
-
-          <Route path="/users" element={<Users />} />
           <Route
-            path="/edituser/:id"
-            element={<EditUser users={users} setUser={setUser} />}
+            path="/signin"
+            element={<SiqnIn />}
           />
+
+         
+
         </Routes>
       </Layout>
     </Box>

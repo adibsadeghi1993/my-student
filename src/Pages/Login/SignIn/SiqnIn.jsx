@@ -1,37 +1,29 @@
 import React from "react";
 
 import * as Yup from "yup";
-import * as api from "../../Services/Services";
 
 import { useFormik } from "formik";
 import { NavLink, useNavigate } from "react-router-dom";
-import Input from "../../Components/Input/Input";
+import Input from "../../../Components/Input/Input";
+import { useSpring, animated } from "react-spring"; // react-spring
+
+
+const phoneRegExp = /^((\\+[1-9]{1,4}[ \\-]*)|(\\([0-9]{2,3}\\)[ \\-]*)|([0-9]{2,4})[ \\-]*)*?[0-9]{3,4}?[ \\-]*[0-9]{3,4}?$/
 
 const validationSchema = Yup.object({
-  username: Yup.string().required("username is required"),
-  email: Yup.string()
-    .email("Must be a valid email")
-    .required("Email is required"),
+    phoneNumber:Yup.string().matches(phoneRegExp, 'Phone number is not valid') ,
   password: Yup.string().required("password is required").min(3),
 });
 
-const SiqnUp = ({ users, setUser }) => {
+const SiqnIn = () => {
   const navigate = useNavigate();
   const initialValues = {
-    username: "",
-    email: "",
+    phoneNumber:"",
     password: "",
   };
 
   const onSubmit = async (values) => {
-    // console.log("values", values); //{username: 'sara', email: 'sara@gmail.com', password: '123'} تازه = میخوام بقرستم سمت بک
-    try {
-      const response = await api.AddUsers(values);
-      // console.log(response); //data: {username: 'sara', email: 'sara@gmail.com', password: '123', id: 4}
-      console.log(response.data);
-      setUser([...users, response.data]);
-      navigate("/");
-    } catch (error) {}
+   console.log(values)
   };
 
   const formik = useFormik({
@@ -43,15 +35,14 @@ const SiqnUp = ({ users, setUser }) => {
 
   return (
     <>
-      <h1 className="text-center text-lg font-bold "></h1>
+      <h1 className="text-center text-lg font-bold ">Sign In</h1>
 
       <div className="w-full max-w-xs m-auto mt-9">
         <form
           onSubmit={formik.handleSubmit}
           className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4"
         >
-          <Input name="username" formik={formik} label="username" />
-          <Input name="email" formik={formik} label="email" />
+          <Input name="phoneNumber" formik={formik} label="phoneNumber" />
           <Input
             name="password"
             formik={formik}
@@ -68,11 +59,13 @@ const SiqnUp = ({ users, setUser }) => {
             >
               Sign In
             </button>
+          </div>
+          <div>
             <NavLink
-              to=""
+              to="/login"
               className="inline-block align-baseline font-bold text-sm text-blue-500 hover:text-blue-800"
             >
-              Forgot Password?
+              SignUp!!!
             </NavLink>
           </div>
         </form>
@@ -81,4 +74,4 @@ const SiqnUp = ({ users, setUser }) => {
   );
 };
 
-export default SiqnUp;
+export default SiqnIn;
