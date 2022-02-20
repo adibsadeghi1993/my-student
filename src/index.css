@@ -9,10 +9,23 @@
 }
 
 
-body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@font-face {
+  font-family: iranyekanM;
+  src: url("./Assests/fonts/iranyekanwebmedium.ttf");
+}
+
+/* @font-face {
+  font-family: iranyekanR;
+  src: url('./Assests/fonts/iranyekanwebregular.ttf');
+}
+
+@font-face {
+  font-family: iranyekanT;
+  src: url('./Assests/fonts/iranyekanwebthin.ttf');
+} */
+
+
+
+body{
+  font-family:iranyekanM
 }

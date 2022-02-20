@@ -1,31 +1,34 @@
-import React from "react";
+import React ,{useState} from "react";
 
 import * as Yup from "yup";
 
 import { useFormik } from "formik";
 import { NavLink, useNavigate } from "react-router-dom";
 import Input from "../../../Components/Input/Input";
-import { useSpring, animated } from "react-spring"; // react-spring
 
 
-const phoneRegExp = /^((\\+[1-9]{1,4}[ \\-]*)|(\\([0-9]{2,3}\\)[ \\-]*)|([0-9]{2,4})[ \\-]*)*?[0-9]{3,4}?[ \\-]*[0-9]{3,4}?$/
+const phoneRegExp =
+  /^((\\+[1-9]{1,4}[ \\-]*)|(\\([0-9]{2,3}\\)[ \\-]*)|([0-9]{2,4})[ \\-]*)*?[0-9]{3,4}?[ \\-]*[0-9]{3,4}?$/;
 
 const validationSchema = Yup.object({
-    phoneNumber:Yup.string().matches(phoneRegExp, 'Phone number is not valid') ,
+  phoneNumber: Yup.string().matches(phoneRegExp, "Phone number is not valid"),
   password: Yup.string().required("password is required").min(3),
 });
 
-const SiqnIn = () => {
-  const navigate = useNavigate();
+const SiqnIn = (props) => {
+
+  // initialValues
   const initialValues = {
-    phoneNumber:"",
+    phoneNumber: "",
     password: "",
   };
 
+  // onsubmit
   const onSubmit = async (values) => {
-   console.log(values)
+    console.log(values);
   };
 
+  // formik
   const formik = useFormik({
     initialValues: initialValues,
     onSubmit: onSubmit,
@@ -35,10 +38,12 @@ const SiqnIn = () => {
 
   return (
     <>
-      <h1 className="text-center text-lg font-bold ">Sign In</h1>
 
       <div className="w-full max-w-xs m-auto mt-9">
+      <h1 className="text-center text-lg font-bold ">Sign In</h1>
         <form
+          
+          
           onSubmit={formik.handleSubmit}
           className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4"
         >
@@ -63,12 +68,14 @@ const SiqnIn = () => {
           <div>
             <NavLink
               to="/login"
+              onClick={props.regClick}
               className="inline-block align-baseline font-bold text-sm text-blue-500 hover:text-blue-800"
             >
               SignUp!!!
             </NavLink>
           </div>
         </form>
+
       </div>
     </>
   );

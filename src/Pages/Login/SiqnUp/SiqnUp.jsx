@@ -7,20 +7,20 @@ import { NavLink, useNavigate } from "react-router-dom";
 import Input from "../../../Components/Input/Input";
 import { useSpring, animated } from "react-spring"; // react-spring
 
-const phoneRegExp = /^((\\+[1-9]{1,4}[ \\-]*)|(\\([0-9]{2,3}\\)[ \\-]*)|([0-9]{2,4})[ \\-]*)*?[0-9]{3,4}?[ \\-]*[0-9]{3,4}?$/
+const phoneRegExp =
+  /^((\\+[1-9]{1,4}[ \\-]*)|(\\([0-9]{2,3}\\)[ \\-]*)|([0-9]{2,4})[ \\-]*)*?[0-9]{3,4}?[ \\-]*[0-9]{3,4}?$/;
 
 const validationSchema = Yup.object({
   username: Yup.string().required("username is required"),
   email: Yup.string()
     .email("Must be a valid email")
     .required("Email is required"),
-    phoneNumber:Yup.string().matches(phoneRegExp, 'Phone number is not valid') ,
+  phoneNumber: Yup.string().matches(phoneRegExp, "Phone number is not valid"),
 
   password: Yup.string().required("password is required").min(3),
 });
 
-const SiqnUp = () => {
- 
+const SiqnUp = (props) => {
   const initialValues = {
     username: "",
     email: "",
@@ -28,7 +28,7 @@ const SiqnUp = () => {
   };
 
   const onSubmit = async (values) => {
-      console.log(values)
+    console.log(values);
   };
 
   const formik = useFormik({
@@ -40,10 +40,10 @@ const SiqnUp = () => {
 
   return (
     <>
-      <h1 className="text-center text-lg font-bold ">Sign up</h1>
-
       <div className="w-full max-w-xs m-auto mt-9">
+        <h1 className="text-center text-lg font-bold ">Sign up</h1>
         <form
+          //  style={styles}
           onSubmit={formik.handleSubmit}
           className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4"
         >
@@ -76,7 +76,8 @@ const SiqnUp = () => {
 
           <div>
             <NavLink
-              to="/Signin"
+              to="/login"
+              onClick={props.loginCliclk}
               className="inline-block align-baseline font-bold text-sm text-blue-500 hover:text-blue-800"
             >
               SignIn!!!

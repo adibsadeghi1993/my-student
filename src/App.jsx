@@ -11,6 +11,7 @@ import Users from "./Pages/Users/Users";
 import Box from "@mui/material/Box";
 import SiqnIn from "./Pages/Login/SignIn/SiqnIn";
 import SiqnUp from "./Pages/Login/SiqnUp/SiqnUp";
+import Login from "./Pages/Login/Login";
 
 function App() {
   const [users, setUser] = useState([]);
@@ -49,14 +50,8 @@ function App() {
 
           <Route
             path="/login"
-            element={<SiqnUp />}
+            element={<Login />}
           />
-          <Route
-            path="/signin"
-            element={<SiqnIn />}
-          />
-
-         
 
         </Routes>
       </Layout>
@@ -65,3 +60,10 @@ function App() {
 }
 
 export default App;
+
+
+
+
+
+
+
