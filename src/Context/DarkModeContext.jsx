@@ -20,7 +20,7 @@ export const ColorContextProvider = ({ children }) => {
         );
       },
     }),
-    [],
+    []
   );
 
   const getDesignTokens = (mode) => ({
@@ -60,7 +60,7 @@ export const ColorContextProvider = ({ children }) => {
   
 
   return (
-    <ColorModeContext.Provider value={colorMode}>
+    <ColorModeContext.Provider value={{colorMode,name:"adib",mode}}>
       
       <ThemeProvider theme={theme}>{children}</ThemeProvider>
     </ColorModeContext.Provider>

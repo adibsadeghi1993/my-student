@@ -15,7 +15,9 @@ import { FiShoppingCart } from "react-icons/fi";
 import "./Navbar.css";
 
 const Navigation = ({ cartItems }) => {
-  const { mode, toggleColorMode } = useContext(ColorModeContext);
+  const { colorMode:{toggleColorMode},name ,mode} = useContext(ColorModeContext);
+  console.log(name)
+  console.log(mode)
   const [open, setOpen] = useState(false);
 
   // const mode=JSON.parse(localStorage.getItem("mode"))
